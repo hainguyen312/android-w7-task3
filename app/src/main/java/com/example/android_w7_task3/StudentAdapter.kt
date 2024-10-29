@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class StudentAdapter(private val studentList: List<Student>) : RecyclerView.Adapter<StudentAdapter.StudentViewHolder>() {
 
-    private var filteredList = studentList.toMutableList()
+    // Bắt đầu với danh sách trống
+    private var filteredList = mutableListOf<Student>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_student, parent, false)
@@ -24,8 +25,9 @@ class StudentAdapter(private val studentList: List<Student>) : RecyclerView.Adap
     override fun getItemCount() = filteredList.size
 
     fun filter(query: String) {
+        // Nếu từ khóa có ít hơn 3 ký tự, làm trống danh sách hiển thị
         filteredList = if (query.length < 3) {
-            studentList.toMutableList()
+            mutableListOf()
         } else {
             studentList.filter {
                 it.name.contains(query, ignoreCase = true) || it.mssv.contains(query)

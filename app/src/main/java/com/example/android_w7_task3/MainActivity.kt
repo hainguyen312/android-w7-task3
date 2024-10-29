@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerView)
         searchEditText = findViewById(R.id.searchEditText)
 
+        // Danh sách sinh viên mẫu
         val studentList = listOf(
             Student("Nguyen Van A", "123456"),
             Student("Le Thi B", "654321"),
@@ -41,15 +42,8 @@ class MainActivity : AppCompatActivity() {
             Student("Nguyen Thi Q", "303132"),
             Student("Le Van R", "333435"),
             Student("Tran Van S", "363738"),
-            Student("Vu Thi T", "394041"),
-            Student("Nguyen Van U", "424344"),
-            Student("Pham Thi V", "454647"),
-            Student("Le Van W", "484950"),
-            Student("Hoang Thi X", "515253"),
-            Student("Tran Van Y", "545556"),
-            Student("Vu Thi Z", "575859")
+            Student("Vu Thi T", "394041")
         )
-
 
         adapter = StudentAdapter(studentList)
         recyclerView.layoutManager = LinearLayoutManager(this)

@@ -6,13 +6,13 @@
     <EditText
         android:id="@+id/searchEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nhập tên hoặc MSSV để tìm kiếm"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="81dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Nhập tên hoặc MSSV để tìm kiếm" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="16dp"12/>
+        android:layout_marginBottom="16dp"/>
 </LinearLayout>
